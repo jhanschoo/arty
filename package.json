@@ -1,0 +1,25 @@
+{
+  "name": "arty",
+  "version": "0.0.0",
+  "description": "tiny javascript library for asserting types on function arguments",
+  "main": "arty.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jhanschoo/arty.git"
+  },
+  "keywords": [
+    "argument",
+    "arguments",
+    "type",
+    "type-checking"
+  ],
+  "author": "Johannes Choo",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jhanschoo/arty/issues"
+  },
+  "homepage": "https://github.com/jhanschoo/arty"
+}
