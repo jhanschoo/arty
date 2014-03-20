@@ -1,6 +1,8 @@
 arty
 =====
 
+**warning: this library is not yet implemented**
+
 tiny javascript library for asserting types on function arguments
 
 To use:
@@ -25,6 +27,6 @@ To use:
       return n1 - n2;
     });
 
-    var multiplication = function (n1, n2) { return n1 * n2; };
-    var typed_multiplication = arty('number', 'number')(multiplication);
+    var times = function (n1, n2) { return n1 * n2; };
+    var typed_times = arty('number', 'number')(multiplication);
 
