@@ -36,4 +36,4 @@ To use:
 To test:
 
     npm install
-    mocha --compilers coffee:focceescript/register
+    mocha --compilers coffee:coffee-script/register
