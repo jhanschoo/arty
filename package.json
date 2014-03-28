@@ -1,11 +1,9 @@
 {
   "name": "arty",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "tiny javascript library for asserting types on function arguments",
   "main": "arty.js",
-  "scripts": {
-    "test": "grunt test"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/jhanschoo/arty.git"
@@ -21,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/jhanschoo/arty/issues"
   },
-  "homepage": "https://github.com/jhanschoo/arty"
+  "homepage": "https://github.com/jhanschoo/arty",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.18.2",
+    "coffee-script": "^1.7.1"
+  }
 }
