@@ -131,7 +131,7 @@ var arty = function (/* types here */) { /* t(...) */
 
 };
 
-arty.x = function() /* dummy arty */
+arty.x = function() { /* dummy arty */
   var f = undefined;
 
   return function (/* function or arguments passed to the function*/) { /* t('types')(...) */

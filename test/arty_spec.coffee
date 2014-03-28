@@ -154,3 +154,52 @@ describe 'arty', ->
         'property3_1': ['bar', 123]
       }
     }).to.throw Error
+
+  it 'should check for arguments in the second position with t(undefined, constraint)', ->
+    fObject = t(undefined,
+      [
+        {
+          'property1': String
+          'property2': Number
+        }
+        {
+          'property1': Number
+          'property3': {
+            'property3_1': [
+              String, Array
+            ]
+          }
+        }
+      ]
+    ) d
+
+    expect(fObject 'Darth Vader', {
+      'property1': 'foo'
+      'property2': 0.2
+      'propertynein': 'dummy'
+    }).to.equal 'valid'
+
+    expect(fObject 'Luke Skywalker', {
+      'property1': 923
+      'property3': {
+        'property0': 'foo'
+        'property3_1': ['bar', ['baz']]
+      }
+    }).to.equal 'valid'
+
+    expect(-> fObject 'Spock', ['world', 'baz']).to.throw Error
+    expect(-> fObject {
+      'property1': 'hello'
+      'property3': {
+        'property0': 'foo'
+        'property3_1': ['bar', ['baz']]
+      }
+    }).to.throw Error
+
+    expect(-> fObject {
+      'property1': 1234
+      'property3': {
+        'property0': 'foo'
+        'property3_1': ['bar', 123]
+      }
+    }, 'Nietzsche').to.throw Error
