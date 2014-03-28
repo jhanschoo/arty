@@ -1,8 +1,6 @@
 arty
 =====
 
-**warning: this library is not yet implemented**
-
 tiny javascript library for asserting types on function arguments
 
 To use:
@@ -30,3 +28,8 @@ To use:
     var times = function (n1, n2) { return n1 * n2; };
     var typed_times = arty('number', 'number')(multiplication);
 
+
+To test:
+
+    npm install
+    mocha --compilers coffee:focceescript/register
