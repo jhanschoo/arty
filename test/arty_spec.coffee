@@ -42,7 +42,7 @@ describe 'arty', ->
     expect(-> fNumber(new Number(42))).to.throw 'Argument 0 did not satisfy constraint [\'number\']'
     expect(-> fNumber({})).to.throw 'Argument 0 did not satisfy constraint [\'number\']'
 
-  it 'should check for numbers with t(Number)', ->
+  it 'should check for numbers and instances of Number with t(Number)', ->
     fNumber = t(Number) d
     expect(fNumber(42)).to.equal 'valid'
     expect(fNumber(new Number())).to.equal 'valid'
@@ -54,7 +54,7 @@ describe 'arty', ->
     expect(-> fBoolean(new Boolean(true))).to.throw 'Argument 0 did not satisfy constraint [\'boolean\']'
     expect(-> fBoolean({})).to.throw 'Argument 0 did not satisfy constraint [\'boolean\']'
 
-  it 'should check for booleans with t(Boolean)', ->
+  it 'should check for booleans and instances of Boolean with t(Boolean)', ->
     fBoolean = t(Boolean) d
     expect(fBoolean(new Boolean())).to.equal 'valid'
     expect(-> fBoolean({})).to.throw 'Argument 0 did not satisfy constraint [Boolean]'
