@@ -1,7 +1,7 @@
 arty
 =====
 
-tiny javascript library for asserting types on function arguments
+tiny javascript library for asserting types, as well as array object schemas on function arguments during runtime
 
 Examples:
 
